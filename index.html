@@ -58,6 +58,16 @@
           max-width: 30%; /* Adjust image width as needed */
           height: auto; /* Maintain aspect ratio */
         }
+        hr {
+            border: 0; /* Remove default browser styling */
+            border-top: 2px solid #4dc7e3; /* Solid line with custom color */
+            margin: 20px 0; /* Add spacing above and below */
+        }
+
+        hr.dashed {
+            border: 0;
+            border-top: 2px dashed #bbb;
+        }
 
         /* Timeline Styles */
         .timeline {
@@ -65,6 +75,12 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px 0; /* Add padding for top and bottom spacing */
+            text-align: center;
+        }
+
+        #timeline h2 {
+            text-align: center;
+            margin-bottom: 15px;
         }
 
         .timeline::after {
@@ -147,7 +163,7 @@
             border: 2px solid #4dc7e3;
         }
 
-        /* For Contact Form */
+<!--        /* For Contact Form */-->
         #contact {
             background-color: #f0f0f0;
             padding: 20px;
@@ -220,16 +236,16 @@
         <img src="Photos/me.jpg" alt="Photo of me" style="max-width: 146px; max-height: 203px;">
     </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Here's a brief introduction about myself and my skills.</p>
-    </section>
+<!--    <section id="about">-->
+<!--        <h2>About Me</h2>-->
+<!--        <p>Here's a brief introduction about myself and my skills.</p>-->
+<!--    </section>-->
 
-    <section id="projects">
-        <h2>My Projects</h2>
-        <!-- Add your projects here -->
-    </section>
-
+<!--    <section id="projects">-->
+<!--        <h2>My Projects</h2>-->
+<!--        &lt;!&ndash; Add your projects here &ndash;&gt;-->
+<!--    </section>-->
+    <hr class="dashed">
     <section id="timeline">
         <h2>Timeline</h2>
         <div class="timeline">
