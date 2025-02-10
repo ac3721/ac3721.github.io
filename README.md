@@ -2,8 +2,7 @@
 
 🔭 I’m a 4th year **Engineering Physics** student on track for May 2026 graduation.  
 🌱 "Jack of all (engineering) trades, master of none, but better than a master of one."  
-📫 Reach me: [LinkedIn](https://linkedin.com/in/alissa--chen)  
-💼 [Portfolio](https://ac3721.github.io)
+📫 Reach me: [LinkedIn](https://linkedin.com/in/alissa--chen) | 💼 [Portfolio](https://ac3721.github.io)
 
 ## 🚀 Skills  
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
