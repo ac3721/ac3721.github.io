@@ -10,6 +10,7 @@
             position: relative;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 20px 0;
         }
         .timeline::after {
             content: '';
@@ -20,12 +21,13 @@
             bottom: 0;
             left: 50%;
             margin-left: -3px;
+            z-index: 1;
         }
         .container {
             padding: 10px 40px;
             position: relative;
             background-color: inherit;
-            width: 50%;
+            width: calc(50% - 30px);
         }
         .container::after {
             content: '';
@@ -38,13 +40,6 @@
             top: 15px;
             border-radius: 50%;
             z-index: 1;
-        }
-        .left::after {
-            left: -16px; /* Adjust for left containers */
-        }
-
-        .right::after {
-            left: -16px; /* Adjust for right containers */
         }
         .left::before {
             content: " ";
@@ -75,9 +70,15 @@
         }
         .content {
             padding: 20px 30px;
-            background-color: white;
+            background-color: #ffff99;
             position: relative;
             border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            z-index: 2;
+        }
+        .content h2, .content p {
+            margin: 0;
+            padding: 5px 0;
         }
         #contact {
             background-color: #f0f0f0; /* Light gray background */
@@ -243,7 +244,7 @@
                 <div class="container right">
                     <div class="content">
                         <h2>Jan 2023 – Apr 2023 </h2>
-                        <h3>><strong>Project:</strong> Catapult</h3>
+                        <h3><strong>Project:</strong> Catapult</h3>
                         <p><b>Skills:</b> Engineering Drawings, caliper, mill</p>
                     </div>
                 </div>
