@@ -1,79 +1,224 @@
-<!doctype html>
-<html>
-  <head>
-    <!-- Page setup -->
-    <meta charset="utf-8">
-    <title>Your title here</title>
-    <meta name="description" content="A brief description of your site for search engines">
-    <meta name="author" content="Information about the author here">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-    <link rel="icon" type="image/png" href="favicon.png">
-  
-    <!-- Stylesheets -->
-    <!-- Reset default styles and add support for google fonts -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
-    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
-   
-    <!-- Custom styles -->
-    <link href="style.css" rel="stylesheet" type="text/css" />
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
-
-    <!-- Want to add Bootstrap? -->
-    <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
-    
-  </head>
-  
-  <body>
-
-    <header id="header">
-      <img src="logo.png">
-      <h1>Simple Website</h1>
-      
-      <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
-      <ul class="main-menu">
-        <li><a href="#home">home</a></li>
-        <li><a href="#about">about</a></li>
-        <li><a href="#contact">contact</a></li>
-      </ul>                 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alissa Chen</title>
+    <style>
+        /* Add your CSS styles here */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #474e5d;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #FF9F55;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            left: 50%;
+        }
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+        .right::after {
+            left: -16px;
+        }
+        .content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-   
-    <div id="container">
-      <div class="inner">
-        <div id="content"> 
-          
-          <div id="home" class="content-region hide">
-            <h2>Home</h2>
-            <p>
-              This is a simple website template published with Github Pages. <a href="https://github.com/zirafa/simple-website-template">Fork this repository</a> to create your own site!
-            </p>
-          </div>
-          
-          <div id="about" class="content-region hide">
-            <h2>About</h2>
-            <p>
-              Sed tempus urna et pharetra pharetra massa massa ultricies. Porttitor rhoncus dolor purus non enim praesent. Id aliquet risus feugiat in ante metus dictum. 
-            </p>
-          </div>
-          
-          <div id="contact" class="content-region hide">
-            <h2>Contact</h2>
-            <p>
-              Pellentesque nec nam aliquam sem et tortor consequat. Quisque sagittis purus sit amet volutpat consequat. Magna eget est lorem ipsum dolor. 
-            </p>
-          </div>
-          
-        </div>
-      </div>
-    </div>
 
-    <footer>  
-      Footer region
+    <main>
+        <section id="home">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Hi, I'm Alissa. I'm a 4th year Engineering Physics student on track for May 2026 graduation.<br>
+            <br>Site still in progress</p>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Here's a brief introduction about myself and my skills.</p>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <!-- Add your projects here -->
+        </section>
+
+        <section id="timeline">
+            <h2>Timeline</h2>
+            <div class="timeline">
+                <div class="container left">
+                    <div class="content">
+                        <h2>Sept 2024 - Present</h2>
+                        <h3><strong>Project:</strong> Hemozoin Detector</h3>
+                        <p><b>Skills:</b> Altium, Onshape, circuit design, optics</p>
+                    </div>
+                </div>
+                <div class="container right">
+                    <div class="content">
+                        <h2>Jun 2024 - Nov 2024</h2>
+                        <h3>Computational Research Officer <br>
+                          <em>Genome Institute of Singapore: Laboratory of RNA Structuromics</em> </h3>
+                        <h4><strong>Industry:</strong> Bioinformatics</h4>
+                        <p><b>Skills:</b> Python, graphing, excel, data analysis, Linux, pipelines</p>
+                    </div>
+                </div>
+                <div class="container left">
+                    <div class="content">
+                        <h2>Feb 2024 – Apr 2024 </h2>
+                        <h3><strong>Project:</strong> Simulated Sign-Reading Robot</h3>
+                        <p><b>Skills:</b> Linux, Robot Operating System, neural networks, Python</p>
+                    </div>
+                </div>
+                <div class="container right">
+                    <div class="content">
+                        <h2>Sept 2024 – Apr 2024</h2>
+                      <h3><strong>Project:</strong> Custom Avionics Gimbal</h3>
+                        <p><b>Skills:</b> Altium, Onshape, procurement, 3D printing</p>
+                    </div>
+                </div>
+                <div class="container left">
+                    <div class="content">
+                        <h2>May 2023 – Aug 2023 </h2>
+                        <h3><strong>Project:</strong> Mario Kart Style Robot </h3>
+                        <p><b>Skills:</b> Waterjet, soldering, lathe, mill, Solidworks</p>
+                    </div>
+                </div>
+                <div class="container right">
+                    <div class="content">
+                        <h2>Jan 2023 – Apr 2023 </h2>
+                        <h3>Project Coordinator<br>
+                          <em>EllisDon Corporation:  Oakridge Park Redevelopment</em> </h3>
+                        <h4><strong>Industry:</strong> Construction</h4>
+                        <p><b>Skills:</b> Google Sheets, BIM, Revit, overlays</p>
+                    </div>
+                </div>
+                <div class="container left">
+                    <div class="content">
+                        <h2>Sept 2022 – Nov 2022 </h2>
+                        <h3><strong>Project:</strong> Spaceship Game</h3>
+                        <p><b>Skills:</b> Java, Git, Intellij, synchronization</p>
+                    </div>
+                </div>
+                <div class="container right">
+                    <div class="content">
+                        <h2>Jan 2022 – Aug 2022 </h2>
+                        <h3>Summer Camp & Curriculum Instructor<br>
+                          <em>UBC Geering Up Engineering Outreach</em> </h3>
+                        <h4><strong>Industry:</strong> Education</h4>
+                        <p><b>Skills:</b> Leadership, teaching, management</p>
+                    </div>
+                </div>
+                <div class="container left">
+                    <div class="content">
+                        <h2>Jan 2022 – Mar 2022 </h2>
+                        <h3><strong>Project:</strong> Semi-Autonomous Claw</h3>
+                        <p><b>Skills:</b> Arduino, Fusion 360, C++</p>
+                    </div>
+                </div>
+                <div class="container right">
+                    <div class="content">
+                        <h2>Sept 2021 – Nov 2021</h2>
+                      <h3><strong>Project:</strong> Cardboard Chair</h3>
+                        <p><b>Skills:</b> WDM, trade-off analysis</p>
+                    </div>
+                </div>
+                <div class="container left">
+                    <div class="content">
+                        <h2>Mar 2020 – June 2020 </h2>
+                        <h3><strong>Project:</strong> Gumball Machine </h3>
+                        <p><b>Skills:</b> AutoCad, Inventor, 3D printing</p>
+                    </div>
+                </div>
+                <div class="container right">
+                    <div class="content">
+                        <h2>Jan 2023 – Apr 2023 </h2>
+                        <h3>><strong>Project:</strong> Catapult</h3>
+                        <p><b>Skills:</b> Engineering Drawings, caliper, mill</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 [Your Name]. All rights reserved.</p>
     </footer>
-    
-    <!-- Load additional JS scripts here -->
-    <script type="text/javascript" src="script.js"></script>
-    
-  </body>
+</body>
 </html>
