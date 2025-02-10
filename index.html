@@ -42,12 +42,31 @@
         nav a:hover {
             text-decoration: underline; /* Underline on hover */
         }
-<!-- Timeline Styles-->
+<!--        Home Styles -->
+        #home {
+          display: flex; /* Important!  Makes this a flex container */
+          align-items: center; /* Optional: Vertically center the items */
+          justify-content: space-between; /* Push items to the edges */
+        }
+
+        #home p {
+          width: 60%; /* Adjust the width of the text area as needed */
+          text-align: left; /* Ensure text is left-aligned within its container */
+        }
+
+        #home img {
+          max-width: 30%; /* Adjust image width as needed */
+          height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Timeline Styles */
         .timeline {
             position: relative;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 20px 0; /* Add padding for top and bottom spacing */
         }
+
         .timeline::after {
             content: '';
             position: absolute;
@@ -57,31 +76,38 @@
             bottom: 0;
             left: 50%;
             margin-left: -3px;
+            z-index: 1; /* Ensure it's behind the content */
         }
+
         .container {
             padding: 10px 40px;
             position: relative;
             background-color: inherit;
             width: 50%;
         }
+
         .container::after {
             content: '';
             position: absolute;
             width: 25px;
             height: 25px;
-            right: -17px;
+            /*right: -17px;*/ /* REMOVE THIS! Use left */
+            left: -16px; /* Position the circle */
             background-color: white;
             border: 4px solid #FF9F55;
             top: 15px;
             border-radius: 50%;
-            z-index: 1;
+            z-index: 2; /* Ensure it's above the line */
         }
+
         .left {
             left: 0;
         }
+
         .right {
             left: 50%;
         }
+
         .left::before {
             content: " ";
             height: 0;
@@ -94,6 +120,7 @@
             border-width: 10px 0 10px 10px;
             border-color: transparent transparent transparent white;
         }
+
         .right::before {
             content: " ";
             height: 0;
@@ -106,9 +133,11 @@
             border-width: 10px 10px 10px 0;
             border-color: transparent white transparent transparent;
         }
+
         .right::after {
-            left: -16px;
+            left: -16px; /* Keep this! */
         }
+
         .content {
             padding: 20px 30px;
             background-color: white;
@@ -118,13 +147,15 @@
             z-index: 2;
             border: 2px solid #FF9F55;
         }
-<!-- For Contact Form -->
+
+        /* For Contact Form */
         #contact {
             background-color: #f0f0f0;
             padding: 20px;
             margin-top: 20px;
             text-align: center;
         }
+
         #contact h2 {
             text-align: center;
             margin-bottom: 15px;
@@ -147,6 +178,7 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
+             box-sizing: border-box; /* Add this so padding doesn't mess up width! */
         }
 
         #contact textarea {
@@ -169,153 +201,153 @@
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#timeline">Timeline</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <main>
-        <section id="home">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Hi, I'm Alissa. I'm a 4th year Engineering Physics student on track for May 2026 graduation.<br>
-                <img src="Photos/me.jpg" alt="Photo of me" style="max-width: 146px; max-height: 203px;">
+<main>
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hi, I'm Alissa. I'm a 4th year Engineering Physics student on track for May 2026 graduation.<br>
             <br>Site still in progress</p>
-        </section>
+        <img src="Photos/me.jpg" alt="Photo of me" style="max-width: 146px; max-height: 203px;">
+    </section>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Here's a brief introduction about myself and my skills.</p>
-        </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Here's a brief introduction about myself and my skills.</p>
+    </section>
 
-        <section id="projects">
-            <h2>My Projects</h2>
-            <!-- Add your projects here -->
-        </section>
+    <section id="projects">
+        <h2>My Projects</h2>
+        <!-- Add your projects here -->
+    </section>
 
-        <section id="timeline">
-            <h2>Timeline</h2>
-            <div class="timeline">
-                <div class="container left">
-                    <div class="content">
-                        <h2>Sept 2024 - Present</h2>
-                        <h3><strong>Project:</strong> Hemozoin Detector</h3>
-                        <p><b>Skills:</b> Altium, Onshape, circuit design, optics</p>
-                    </div>
-                </div>
-                <div class="container right">
-                    <div class="content">
-                        <h2>Jun 2024 - Nov 2024</h2>
-                        <h3>Computational Research Officer <br>
-                          <em>Genome Institute of Singapore: Laboratory of RNA Structuromics</em> </h3>
-                        <h4><strong>Industry:</strong> Bioinformatics</h4>
-                        <p><b>Skills:</b> Python, graphing, excel, data analysis, Linux, pipelines</p>
-                    </div>
-                </div>
-                <div class="container left">
-                    <div class="content">
-                        <h2>Feb 2024 – Apr 2024 </h2>
-                        <h3><strong>Project:</strong> Simulated Sign-Reading Robot</h3>
-                        <p><b>Skills:</b> Linux, Robot Operating System, neural networks, Python</p>
-                    </div>
-                </div>
-                <div class="container right">
-                    <div class="content">
-                        <h2>Sept 2024 – Apr 2024</h2>
-                      <h3><strong>Project:</strong> Custom Avionics Gimbal</h3>
-                        <p><b>Skills:</b> Altium, Onshape, procurement, 3D printing</p>
-                    </div>
-                </div>
-                <div class="container left">
-                    <div class="content">
-                        <h2>May 2023 – Aug 2023 </h2>
-                        <h3><strong>Project:</strong> Mario Kart Style Robot </h3>
-                        <p><b>Skills:</b> Waterjet, soldering, lathe, mill, Solidworks</p>
-                    </div>
-                </div>
-                <div class="container right">
-                    <div class="content">
-                        <h2>Jan 2023 – Apr 2023 </h2>
-                        <h3>Project Coordinator<br>
-                          <em>EllisDon Corporation:  Oakridge Park Redevelopment</em> </h3>
-                        <h4><strong>Industry:</strong> Construction</h4>
-                        <p><b>Skills:</b> Google Sheets, BIM, Revit, overlays</p>
-                    </div>
-                </div>
-                <div class="container left">
-                    <div class="content">
-                        <h2>Sept 2022 – Nov 2022 </h2>
-                        <h3><strong>Project:</strong> Spaceship Game</h3>
-                        <p><b>Skills:</b> Java, Git, Intellij, synchronization</p>
-                    </div>
-                </div>
-                <div class="container right">
-                    <div class="content">
-                        <h2>Jan 2022 – Aug 2022 </h2>
-                        <h3>Summer Camp & Curriculum Instructor<br>
-                          <em>UBC Geering Up Engineering Outreach</em> </h3>
-                        <h4><strong>Industry:</strong> Education</h4>
-                        <p><b>Skills:</b> Leadership, teaching, management</p>
-                    </div>
-                </div>
-                <div class="container left">
-                    <div class="content">
-                        <h2>Jan 2022 – Mar 2022 </h2>
-                        <h3><strong>Project:</strong> Semi-Autonomous Claw</h3>
-                        <p><b>Skills:</b> Arduino, Fusion 360, C++</p>
-                    </div>
-                </div>
-                <div class="container right">
-                    <div class="content">
-                        <h2>Sept 2021 – Nov 2021</h2>
-                      <h3><strong>Project:</strong> Cardboard Chair</h3>
-                        <p><b>Skills:</b> WDM, trade-off analysis</p>
-                    </div>
-                </div>
-                <div class="container left">
-                    <div class="content">
-                        <h2>Mar 2020 – June 2020 </h2>
-                        <h3><strong>Project:</strong> Gumball Machine </h3>
-                        <p><b>Skills:</b> AutoCad, Inventor, 3D printing</p>
-                    </div>
-                </div>
-                <div class="container right">
-                    <div class="content">
-                        <h2>Jan 2023 – Apr 2023 </h2>
-                        <h3><strong>Project:</strong> Catapult</h3>
-                        <p><b>Skills:</b> Engineering Drawings, caliper, mill</p>
-                    </div>
+    <section id="timeline">
+        <h2>Timeline</h2>
+        <div class="timeline">
+            <div class="container left">
+                <div class="content">
+                    <h2>Sept 2024 - Present</h2>
+                    <h3><strong>Project:</strong> Hemozoin Detector</h3>
+                    <p><b>Skills:</b> Altium, Onshape, circuit design, optics</p>
                 </div>
             </div>
-        </section>
+            <div class="container right">
+                <div class="content">
+                    <h2>Jun 2024 - Nov 2024</h2>
+                    <h3>Computational Research Officer <br>
+                        <em>Genome Institute of Singapore: Laboratory of RNA Structuromics</em> </h3>
+                    <h4><strong>Industry:</strong> Bioinformatics</h4>
+                    <p><b>Skills:</b> Python, graphing, excel, data analysis, Linux, pipelines</p>
+                </div>
+            </div>
+            <div class="container left">
+                <div class="content">
+                    <h2>Feb 2024 – Apr 2024 </h2>
+                    <h3><strong>Project:</strong> Simulated Sign-Reading Robot</h3>
+                    <p><b>Skills:</b> Linux, Robot Operating System, neural networks, Python</p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="content">
+                    <h2>Sept 2024 – Apr 2024</h2>
+                    <h3><strong>Project:</strong> Custom Avionics Gimbal</h3>
+                    <p><b>Skills:</b> Altium, Onshape, procurement, 3D printing</p>
+                </div>
+            </div>
+            <div class="container left">
+                <div class="content">
+                    <h2>May 2023 – Aug 2023 </h2>
+                    <h3><strong>Project:</strong> Mario Kart Style Robot </h3>
+                    <p><b>Skills:</b> Waterjet, soldering, lathe, mill, Solidworks</p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="content">
+                    <h2>Jan 2023 – Apr 2023 </h2>
+                    <h3>Project Coordinator<br>
+                        <em>EllisDon Corporation:  Oakridge Park Redevelopment</em> </h3>
+                    <h4><strong>Industry:</strong> Construction</h4>
+                    <p><b>Skills:</b> Google Sheets, BIM, Revit, overlays</p>
+                </div>
+            </div>
+            <div class="container left">
+                <div class="content">
+                    <h2>Sept 2022 – Nov 2022 </h2>
+                    <h3><strong>Project:</strong> Spaceship Game</h3>
+                    <p><b>Skills:</b> Java, Git, Intellij, synchronization</p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="content">
+                    <h2>Jan 2022 – Aug 2022 </h2>
+                    <h3>Summer Camp & Curriculum Instructor<br>
+                        <em>UBC Geering Up Engineering Outreach</em> </h3>
+                    <h4><strong>Industry:</strong> Education</h4>
+                    <p><b>Skills:</b> Leadership, teaching, management</p>
+                </div>
+            </div>
+            <div class="container left">
+                <div class="content">
+                    <h2>Jan 2022 – Mar 2022 </h2>
+                    <h3><strong>Project:</strong> Semi-Autonomous Claw</h3>
+                    <p><b>Skills:</b> Arduino, Fusion 360, C++</p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="content">
+                    <h2>Sept 2021 – Nov 2021</h2>
+                    <h3><strong>Project:</strong> Cardboard Chair</h3>
+                    <p><b>Skills:</b> WDM, trade-off analysis</p>
+                </div>
+            </div>
+            <div class="container left">
+                <div class="content">
+                    <h2>Mar 2020 – June 2020 </h2>
+                    <h3><strong>Project:</strong> Gumball Machine </h3>
+                    <p><b>Skills:</b> AutoCad, Inventor, 3D printing</p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="content">
+                    <h2>Jan 2023 – Apr 2023 </h2>
+                    <h3><strong>Project:</strong> Catapult</h3>
+                    <p><b>Skills:</b> Engineering Drawings, caliper, mill</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form>
-                <div class="form-group">
-                    <input type="text" placeholder="Your Name">
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Your Email">
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="Your Message"></textarea>
-                </div>
-                <div class="form-group">
-                    <button type="submit">Send</button>
-                </div>
-            </form>
-        </section>
-    </main>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <div class="form-group">
+                <input type="text" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Your Message"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </section>
+</main>
 
-    <footer>
-        <p>&copy; 2025 Alissa. All rights reserved.</p>
-    </footer>
+<footer>
+    <p>&copy; 2025 Alissa. All rights reserved.</p>
+</footer>
 </body>
 </html>
