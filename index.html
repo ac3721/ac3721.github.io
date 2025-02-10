@@ -49,6 +49,19 @@
           justify-content: space-between; /* Distributes space evenly between items */
         }
 
+        #home .welcome-header {
+            background-image: url('Photos/bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white; /* Ensure text is visible on the background */
+            padding: 20px; /* Add some padding around the text */
+            text-align: center; /* Center the text */
+            /* Optional: add a semi-transparent overlay to improve text readability */
+            background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+            background-blend-mode: overlay;
+        }
+
         #home .text-content {
           flex: 1; /* Allows text content to grow and fill available space */
           padding-right: 20px; /* Adds spacing between text and image */
@@ -261,7 +274,7 @@
 
 <main>
     <section id="home">
-        <h1>Welcome to My Portfolio</h1>
+        <h1 class="welcome-header">Welcome to My Portfolio</h1>
         <div class="text-content">
             <p>Hi, I'm Alissa. I'm a 4th year Engineering Physics student on track for May 2026 graduation.<br>
                 <br>Site still in progress</p>
