@@ -6,11 +6,11 @@
     <title>Alissa Chen</title>
     <style>
         /* Add your CSS styles here */
+        /* Add your CSS styles here */
         .timeline {
             position: relative;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px 0;
         }
         .timeline::after {
             content: '';
@@ -21,25 +21,30 @@
             bottom: 0;
             left: 50%;
             margin-left: -3px;
-            z-index: 1;
         }
         .container {
             padding: 10px 40px;
             position: relative;
             background-color: inherit;
-            width: calc(50% - 30px);
+            width: 50%;
         }
         .container::after {
             content: '';
             position: absolute;
             width: 25px;
             height: 25px;
-<!--            right: -17px;-->
+            right: -17px;
             background-color: white;
             border: 4px solid #FF9F55;
             top: 15px;
             border-radius: 50%;
             z-index: 1;
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            left: 50%;
         }
         .left::before {
             content: " ";
@@ -69,19 +74,16 @@
             left: -16px;
         }
         .content {
-            padding: 20px 30px;
-            background-color: #ffff99;
+            padding: 20px;
+            background-color: white; /* Change to white or transparent */
             position: relative;
             border-radius: 6px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             z-index: 2;
-        }
-        .content h2, .content p {
-            margin: 0;
-            padding: 5px 0;
+            border: 2px solid #474e5d;
         }
         #contact {
-            background-color: #f0f0f0; /* Light gray background */
+            background-color: #f0f0f0;
             padding: 20px;
             margin-top: 20px;
         }
