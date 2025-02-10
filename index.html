@@ -167,13 +167,37 @@
         }
 
         .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
             padding: 20px 30px;
             background-color: white;
             position: relative;
             border-radius: 6px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            z-index: 2;
             border: 2px solid #4dc7e3;
+        }
+        .text-content {
+            flex: 1;
+            padding-right: 15px;
+        }
+
+        .content img {
+            max-width: 30%;
+            height: auto;
+            align-self: center;
+        }
+
+        /* For smaller screens */
+        @media screen and (max-width: 600px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .content img {
+                max-width: 100%;
+                margin-top: 15px;
+            }
         }
 
 <!--        /* For Contact Form */-->
@@ -244,10 +268,11 @@
 <main>
     <section id="home">
         <h1>Welcome to My Portfolio</h1>
+        <div class="text-content">
         <p>Hi, I'm Alissa. I'm a 4th year Engineering Physics student on track for May 2026 graduation.<br>
             <br>Site still in progress</p>
-        <img src="Photos/me.jpg" alt="Photo of me">
-<!--        style="max-width: 146px; max-height: 203px;">-->
+        </div>
+        <img src="Photos/me.jpg" alt="Photo of me" style="max-width: 146px; max-height: 203px;">
     </section>
 
 <!--    <section id="about">-->
@@ -265,100 +290,123 @@
         <div class="timeline">
             <div class="container left">
                 <div class="content">
-                    <h2>Sept 2024 - Present</h2>
-                    <h3><strong>Project:</strong> Hemozoin Detector</h3>
-                    <p><b>Skills:</b> Altium, Onshape, circuit design, optics</p>
+                    <div class="text-content">
+                        <h2>Sept 2024 - Present</h2>
+                        <h3><strong>Project:</strong> Hemozoin Detector</h3>
+                        <p><b>Skills:</b> Altium, Onshape, circuit design, optics</p>
+                    </div>
                     <img src="Photos/hemo.jpg" alt="Photo of PCB for Hemozoin Detector">
-<!--                    style="max-width: 146px; max-height: 203px;">-->
                 </div>
             </div>
             <div class="container right">
                 <div class="content">
-                    <h2>Jun 2024 - Nov 2024</h2>
-                    <h3>Computational Research Officer <br>
-                        <em>Genome Institute of Singapore: Laboratory of RNA Structuromics</em> </h3>
-                    <h4><strong>Industry:</strong> Bioinformatics</h4>
-                    <p><b>Skills:</b> Python, graphing, excel, data analysis, Linux, pipelines</p>
+                    <div class="text-content">
+                        <h2>Jun 2024 - Nov 2024</h2>
+                        <h3>Computational Research Officer <br>
+                            <em>Genome Institute of Singapore: Laboratory of RNA Structuromics</em> </h3>
+                        <h4><strong>Industry:</strong> Bioinformatics</h4>
+                        <p><b>Skills:</b> Python, graphing, excel, data analysis, Linux, pipelines</p>
+                    </div>
                     <img src="Photos/GIS.jpg" alt="Photo of Wan Lab Group">
                 </div>
             </div>
             <div class="container left">
                 <div class="content">
-                    <h2>Feb 2024 – Apr 2024 </h2>
-                    <h3><strong>Project:</strong> Simulated Sign-Reading Robot</h3>
-                    <p><b>Skills:</b> Linux, Robot Operating System, neural networks, Python, image detection</p>
+                    <div class="text-content">
+                        <h2>Feb 2024 – Apr 2024 </h2>
+                        <h3><strong>Project:</strong> Simulated Sign-Reading Robot</h3>
+                        <p><b>Skills:</b> Linux, Robot Operating System, neural networks, Python, image detection</p>
+                    </div>
                     <img src="Photos/ROS.jpg" alt="Photo of image detection">
                 </div>
             </div>
             <div class="container right">
                 <div class="content">
-                    <h2>Sept 2024 – Apr 2024</h2>
-                    <h3><strong>Project:</strong> Custom Avionics Gimbal</h3>
-                    <p><b>Skills:</b> Altium, Onshape, procurement, 3D printing</p>
+                    <div class="text-content">
+                        <h2>Sept 2024 – Apr 2024</h2>
+                        <h3><strong>Project:</strong> Custom Avionics Gimbal</h3>
+                        <p><b>Skills:</b> Altium, Onshape, procurement, 3D printing</p>
+                    </div>
                     <img src="Photos/gimbal.jpg" alt="Photo of gimbal CAD">
                 </div>
             </div>
             <div class="container left">
                 <div class="content">
-                    <h2>May 2023 – Aug 2023 </h2>
-                    <h3><strong>Project:</strong> Mario Kart Style Robot </h3>
-                    <p><b>Skills:</b> Waterjet, soldering, lathe, mill, Solidworks</p>
+                    <div class="text-content">
+                        <h2>May 2023 – Aug 2023 </h2>
+                        <h3><strong>Project:</strong> Mario Kart Style Robot </h3>
+                        <p><b>Skills:</b> Waterjet, soldering, lathe, mill, Solidworks</p>
+                    </div>
                     <img src="Photos/robot.jpg" alt="Photo of robot before protective casing">
                 </div>
             </div>
             <div class="container right">
                 <div class="content">
-                    <h2>Jan 2023 – Apr 2023 </h2>
-                    <h3>Project Coordinator<br>
-                        <em>EllisDon Corporation:  Oakridge Park Redevelopment</em> </h3>
-                    <h4><strong>Industry:</strong> Construction</h4>
-                    <p><b>Skills:</b> Google Sheets, BIM, Revit, overlays</p>
+                    <div class="text-content">
+                        <h2>Jan 2023 – Apr 2023 </h2>
+                        <h3>Project Coordinator<br>
+                            <em>EllisDon Corporation:  Oakridge Park Redevelopment</em> </h3>
+                        <h4><strong>Industry:</strong> Construction</h4>
+                        <p><b>Skills:</b> Google Sheets, BIM, Revit, overlays</p>
+                    </div>
                     <img src="Photos/ED.jpg" alt="Photo of Ellisdon Oakridge interns">
                 </div>
             </div>
             <div class="container left">
                 <div class="content">
-                    <h2>Sept 2022 – Nov 2022 </h2>
-                    <h3><strong>Project:</strong> Spaceship Game</h3>
-                    <p><b>Skills:</b> Java, Git, Intellij, synchronization</p>
+                    <div class="text-content">
+                        <h2>Sept 2022 – Nov 2022 </h2>
+                        <h3><strong>Project:</strong> Spaceship Game</h3>
+                        <p><b>Skills:</b> Java, Git, Intellij, synchronization</p>
+                    </div>
                 </div>
             </div>
             <div class="container right">
                 <div class="content">
-                    <h2>Jan 2022 – Aug 2022 </h2>
-                    <h3>Summer Camp & Curriculum Instructor<br>
-                        <em>UBC Geering Up Engineering Outreach</em> </h3>
-                    <h4><strong>Industry:</strong> Education</h4>
-                    <p><b>Skills:</b> Leadership, teaching, management</p>
+                    <div class="text-content">
+                        <h2>Jan 2022 – Aug 2022 </h2>
+                        <h3>Summer Camp & Curriculum Instructor<br>
+                            <em>UBC Geering Up Engineering Outreach</em> </h3>
+                        <h4><strong>Industry:</strong> Education</h4>
+                        <p><b>Skills:</b> Leadership, teaching, management</p>
+                    </div>
                     <img src="Photos/GU.jpg" alt="Photo of Geering Up Richmond staff">
                 </div>
             </div>
             <div class="container left">
                 <div class="content">
-                    <h2>Jan 2022 – Mar 2022 </h2>
-                    <h3><strong>Project:</strong> Semi-Autonomous Claw</h3>
-                    <p><b>Skills:</b> Arduino, Fusion 360, C++</p>
+                    <div class="text-content">
+                        <h2>Jan 2022 – Mar 2022 </h2>
+                        <h3><strong>Project:</strong> Semi-Autonomous Claw</h3>
+                        <p><b>Skills:</b> Arduino, Fusion 360, C++</p>
+                    </div>
                 </div>
             </div>
             <div class="container right">
                 <div class="content">
-                    <h2>Sept 2021 – Nov 2021</h2>
-                    <h3><strong>Project:</strong> Cardboard Chair</h3>
-                    <p><b>Skills:</b> WDM, trade-off analysis</p>
+                    <div class="text-content">
+                        <h2>Sept 2021 – Nov 2021</h2>
+                        <h3><strong>Project:</strong> Cardboard Chair</h3>
+                        <p><b>Skills:</b> WDM, trade-off analysis</p>
+                    </div>
                 </div>
             </div>
             <div class="container left">
                 <div class="content">
-                    <h2>Mar 2020 – June 2020 </h2>
-                    <h3><strong>Project:</strong> Gumball Machine </h3>
-                    <p><b>Skills:</b> AutoCad, Inventor, 3D printing</p>
+                    <div class="text-content">
+                        <h2>Mar 2020 – June 2020 </h2>
+                        <h3><strong>Project:</strong> Gumball Machine </h3>
+                        <p><b>Skills:</b> AutoCad, Inventor, 3D printing</p>
+                    </div>
                 </div>
             </div>
             <div class="container right">
                 <div class="content">
-                    <h2>Jan 2023 – Apr 2023 </h2>
-                    <h3><strong>Project:</strong> Catapult</h3>
-                    <p><b>Skills:</b> Engineering Drawings, caliper, mill</p>
+                    <div class="text-content">
+                        <h2>Jan 2023 – Apr 2023 </h2>
+                        <h3><strong>Project:</strong> Catapult</h3>
+                        <p><b>Skills:</b> Engineering Drawings, caliper, mill</p>
+                    </div>
                 </div>
             </div>
         </div>
