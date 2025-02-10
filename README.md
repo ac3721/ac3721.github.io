@@ -1,4 +1,4 @@
-# Hi, I'm [Alissa] 👋
+# Hi, I'm Alissa 👋
 
 🔭 I’m a 4th year **Engineering Physics** student on track for May 2026 graduation.  
 🌱 "Jack of all (engineering) trades, master of none, but better than a master of one."  
