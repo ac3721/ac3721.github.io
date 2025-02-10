@@ -6,6 +6,43 @@
     <title>Alissa Chen</title>
     <style>
         /* Add your CSS styles here */
+        body {
+          margin: 0; /* Remove default body margin */
+        }
+
+        header {
+            background-color: #58e5f5; /* Blue background */
+            color: white; /* White text */
+            padding: 10px;
+            text-align: left; /* Left-align the content */
+            position: sticky; /* Stick header to top on scroll */
+            top: 0;
+            z-index: 100; /* Ensure header stays on top */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* Make list items horizontal */
+            align-items: center; /* Vertically center items */
+        }
+
+        nav li {
+            margin-right: 20px; /* Add spacing between items */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold; /* Make links bold */
+            display: block; /* Make links clickable area larger */
+        }
+
+        nav a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+<!-- Timeline Styles-->
         .timeline {
             position: relative;
             max-width: 1200px;
@@ -87,6 +124,10 @@
             padding: 20px;
             margin-top: 20px;
             text-align: center;
+        }
+        #contact h2 {
+            text-align: center;
+            margin-bottom: 15px;
         }
 
         #contact form {
