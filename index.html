@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alissa Chen</title>
     <style>
+            /* Tab Content Styling */
+        .tabcontent {
+            display: none; /* Hide all tabs by default */
+        }
+        .tabcontent.active {
+            display: block; /* Show active tab */
+        }
+
+        /* Active Tab Link Styling */
+        nav a.active {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
         /* Add your CSS styles here */
         body {
           margin: 0; /* Remove default body margin */
@@ -44,37 +57,63 @@
         }
 <!--        Home Styles -->
         #home {
-            display: flex;
-            flex-direction: row; /* Explicitly set row direction */
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px; /* Add some padding around content */
+          display: flex; /* Establishes a flex container */
+          align-items: center; /* Vertically aligns items in the center */
+          justify-content: space-between; /* Distributes space evenly between items */
         }
 
         #home .welcome-header {
-            width: 100%; /* Make header full width */
-            position: absolute; /* Position absolutely to take out of flex flow */
-            top: 60px; /* Position below header */
+            background-image: url('Photos/bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white; /* Ensure text is visible on the background */
+            padding: 20px; /* Add some padding around the text */
+            text-align: center; /* Center the text */
+            /* Optional: add a semi-transparent overlay to improve text readability */
+            background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+            background-blend-mode: overlay;
         }
 
         #home .text-content {
-            flex: 1;
-            padding-right: 40px; /* Increase spacing between text and image */
-            order: 1; /* Ensure text comes first in flex order */
+          flex: 1; /* Allows text content to grow and fill available space */
+          padding-right: 20px; /* Adds spacing between text and image */
         }
 
         #home img {
-            max-width: 300px; /* Increase image size slightly */
-            order: 2; /* Explicitly set image to come after text */
-            margin-left: auto; /* Push image to right */
+          max-width: 30%; /* Sets a maximum width for the image */
+          height: auto; /* Maintains the image's aspect ratio */
         }
 
-        /* Updated Timeline Styles */
+        hr {
+            border: 0; /* Remove default browser styling */
+            border-top: 2px solid #4dc7e3; /* Solid line with custom color */
+            margin: 20px 0; /* Add spacing above and below */
+        }
+
+        hr.dashed {
+            border: 0;
+            border-top: 2px dashed #4dc7e3;
+        }
+
+        /* Timeline Styles */
         .timeline {
             position: relative;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px 0;
+            padding: 20px 0; /* Add padding for top and bottom spacing */
+            text-align: center;
+        }
+
+        #timeline h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        #timeline img {
+          max-width: 30%; /* Adjust image width as needed */
+          height: auto; /* Maintain aspect ratio */
+          text-align: right;
         }
 
         .timeline::after {
@@ -86,16 +125,14 @@
             bottom: 0;
             left: 50%;
             margin-left: -3px;
-            z-index: 1;
+            z-index: 1; /* Ensure it's behind the content */
         }
 
         .container {
             padding: 10px 40px;
             position: relative;
-            width: 80%;
-            left: 50%;
-            transform: translateX(-50%);
-            margin: 20px 0;
+            background-color: inherit;
+            width: 45%;
         }
 
         .container::after {
@@ -103,13 +140,50 @@
             position: absolute;
             width: 25px;
             height: 25px;
-            left: 50%;
-            margin-left: -12px;
+            left: -17px;  /*circle area*/
             background-color: white;
             border: 4px solid #4dc7e3;
             top: 15px;
             border-radius: 50%;
-            z-index: 2;
+            z-index: 2; /* Ensure it's above the line */
+        }
+
+        .left {
+            left: 0%;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        .right::after {
+            left: -17px; /* Keep this! */
         }
 
         .content {
@@ -123,17 +197,19 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             border: 2px solid #4dc7e3;
         }
-
-        /* Remove left/right specific styles */
-        .left::before, .right::before {
-            display: none;
+        .text-content {
+            flex: 1;
+            padding-right: 15px;
         }
 
-        @media screen and (max-width: 600px) {
-            .container {
-                width: 90%;
-            }
+        .content img {
+            max-width: 30%;
+            height: auto;
+            align-self: center;
+        }
 
+        /* For smaller screens */
+        @media screen and (max-width: 600px) {
             .content {
                 flex-direction: column;
             }
@@ -143,17 +219,6 @@
                 margin-top: 15px;
             }
         }
-<!--        /* For smaller screens */-->
-<!--        @media screen and (max-width: 600px) {-->
-<!--            .content {-->
-<!--                flex-direction: column;-->
-<!--            }-->
-
-<!--            .content img {-->
-<!--                max-width: 100%;-->
-<!--                margin-top: 15px;-->
-<!--            }-->
-<!--        }-->
 
 <!--        /* For Contact Form */-->
         #contact {
@@ -212,8 +277,8 @@
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about" class="tablink" onclick="openTab(event, 'about')">About</a></li>
+            <li><a href="#projects" class="tablink" onclick="openTab(event, 'projects')">Projects</a></li>
             <li><a href="#timeline">Timeline</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -230,21 +295,20 @@
         <img src="Photos/me.jpg" alt="Photo of me" style="max-width: 146px; max-height: 203px;">
     </section>
 
-<!--    <section id="about">-->
-<!--        <h2>About Me</h2>-->
-<!--        <p>Here's a brief introduction about myself and my skills.</p>-->
-<!--    </section>-->
+    <!--    <section id="about">-->
+    <!--        <h2>About Me</h2>-->
+    <!--        <p>Here's a brief introduction about myself and my skills.</p>-->
+    <!--    </section>-->
 
-<!--    <section id="projects">-->
-<!--        <h2>My Projects</h2>-->
-<!--        &lt;!&ndash; Add your projects here &ndash;&gt;-->
-<!--    </section>-->
+    <!--    <section id="projects">-->
+    <!--        <h2>My Projects</h2>-->
+    <!--        &lt;!&ndash; Add your projects here &ndash;&gt;-->
+    <!--    </section>-->
     <hr class="dashed">
     <section id="timeline">
         <h2>Timeline</h2>
         <div class="timeline">
-<!--            <div class="container left">-->
-            <div class="container">
+            <div class="container left">
                 <div class="content">
                     <div class="text-content">
                         <h2>Sept 2024 - Present</h2>
@@ -254,9 +318,8 @@
                     <img src="Photos/hemo.jpg" alt="Photo of PCB for Hemozoin Detector">
                 </div>
             </div>
-<!--            <div class="container right">-->
-            <div class="container">
-            <div class="content">
+            <div class="container right">
+                <div class="content">
                     <div class="text-content">
                         <h2>Jun 2024 - Nov 2024</h2>
                         <h3>Computational Research Officer <br>
@@ -267,8 +330,7 @@
                     <img src="Photos/GIS.jpg" alt="Photo of Wan Lab Group">
                 </div>
             </div>
-<!--            <div class="container left">-->
-            <div class="container">
+            <div class="container left">
                 <div class="content">
                     <div class="text-content">
                         <h2>Feb 2024 – Apr 2024 </h2>
@@ -278,8 +340,7 @@
                     <img src="Photos/ROS.jpg" alt="Photo of image detection">
                 </div>
             </div>
-<!--            <div class="container right">-->
-            <div class="container">
+            <div class="container right">
                 <div class="content">
                     <div class="text-content">
                         <h2>Sept 2024 – Apr 2024</h2>
@@ -289,8 +350,7 @@
                     <img src="Photos/gimbal.jpg" alt="Photo of gimbal CAD">
                 </div>
             </div>
-<!--            <div class="container left">-->
-            <div class="container">
+            <div class="container left">
                 <div class="content">
                     <div class="text-content">
                         <h2>May 2023 – Aug 2023 </h2>
@@ -300,8 +360,7 @@
                     <img src="Photos/robot.jpg" alt="Photo of robot before protective casing">
                 </div>
             </div>
-<!--            <div class="container right">-->
-            <div class="container">
+            <div class="container right">
                 <div class="content">
                     <div class="text-content">
                         <h2>Jan 2023 – Apr 2023 </h2>
@@ -313,8 +372,7 @@
                     <img src="Photos/ED.jpg" alt="Photo of Ellisdon Oakridge interns">
                 </div>
             </div>
-<!--            <div class="container left">-->
-            <div class="container">
+            <div class="container left">
                 <div class="content">
                     <div class="text-content">
                         <h2>Sept 2022 – Nov 2022 </h2>
@@ -323,8 +381,7 @@
                     </div>
                 </div>
             </div>
-<!--            <div class="container right">-->
-            <div class="container">
+            <div class="container right">
                 <div class="content">
                     <div class="text-content">
                         <h2>Jan 2022 – Aug 2022 </h2>
@@ -336,8 +393,7 @@
                     <img src="Photos/GU.jpg" alt="Photo of Geering Up Richmond staff">
                 </div>
             </div>
-<!--            <div class="container left">-->
-            <div class="container">
+            <div class="container left">
                 <div class="content">
                     <div class="text-content">
                         <h2>Jan 2022 – Mar 2022 </h2>
@@ -346,8 +402,7 @@
                     </div>
                 </div>
             </div>
-<!--            <div class="container right">-->
-            <div class="container">
+            <div class="container right">
                 <div class="content">
                     <div class="text-content">
                         <h2>Sept 2021 – Nov 2021</h2>
@@ -356,8 +411,7 @@
                     </div>
                 </div>
             </div>
-<!--            <div class="container left">-->
-            <div class="container">
+            <div class="container left">
                 <div class="content">
                     <div class="text-content">
                         <h2>Mar 2020 – June 2020 </h2>
@@ -366,8 +420,7 @@
                     </div>
                 </div>
             </div>
-<!--            <div class="container right">-->
-            <div class="container">
+            <div class="container right">
                 <div class="content">
                     <div class="text-content">
                         <h2>Jan 2023 – Apr 2023 </h2>
