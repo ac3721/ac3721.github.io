@@ -72,6 +72,7 @@
             display: flex; /* Establishes a flex container */
             align-items: center; /* Vertically aligns items in the center */
             justify-content: space-between; /* Distributes space evenly between items */
+            flex-direction: column;
         }
 
         #home h1 {
@@ -79,6 +80,33 @@
             margin-bottom: 15px;
             color: #368B9E;
             padding: 10px; /* Add padding for spacing */
+        }
+
+        .home-content {
+            display: flex;
+            justify-content: space-between; /* Space between left and right content */
+            align-items: flex-start; /* Align items to the top */
+            width: 100%; /* Full width */
+            max-width: 1200px; /* Optional: Limit max width for better readability */
+            margin: 0 auto; /* Center the container */
+            padding: 0 20px; /* Add padding for spacing */
+        }
+
+        .left-content {
+            flex: 1; /* Take up remaining space */
+            padding-right: 20px; /* Add spacing between text and photo */
+        }
+
+        .photo {
+            flex-shrink: 0; /* Prevent the photo from shrinking */
+            width: 30%; /* Adjust width as needed */
+            text-align: right; /* Align the photo to the right */
+        }
+
+        .photo img {
+            max-width: 100%; /* Ensure the image fits within the container */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px; /* Optional: Add rounded corners */
         }
 
         #home .text-content {
@@ -93,6 +121,19 @@
             #home .text-content {
                 margin: 0 10px;
                 padding-right: 0;
+            }
+            #home .home-content {
+                flex-direction: column; /* Stack content vertically on small screens */
+            }
+
+            #home .photo {
+                width: 100%; /* Full width for the photo */
+                text-align: center; /* Center the photo */
+                margin-top: 20px; /* Add spacing between text and photo */
+            }
+
+            #home .left-content {
+                padding-right: 0; /* Remove padding on small screens */
             }
         }
 
@@ -345,20 +386,24 @@
 
 <main>
     <section id="home">
-        <br>
-        <br>
-        <h1 class="c">Welcome to Alissa's Portfolio</h1>
-        <div class="text-content">
-            <p>Hello, I'm Alissa, a 4th year Engineering Physics student on track for May 2026 graduation. In my spare time, I like taking photos, both digital and film. I also enjoy sunsets and traveling. Just last year, I added 13 new cities to my list while being on Co-op.<br>
-                <br>Site still in progress</p>
-        </div>
+
         <div class="photo-grid">
             <img src="Photos/Chongqing.jpg" alt="Photo of Chongqing's Hongya Caves">
             <img src="Photos/Angkor.jpg" alt="Photo of Angkor Wat's Sunrise">
             <img src="Photos/Penang.jpg" alt="Photo of Penang's Batu Ferringhi Sunset">
             <img src="Photos/Melaka.jpg" alt="Photo of Melaka's Dutch Square">
-            <img src="Photos/me.jpg" alt="Photo of me">
-<!--            style="max-width: 146px; max-height: 203px;">-->
+        </div>
+        <div class="home-content">
+            <div class="left-content">
+                <h1 class="c">Welcome to My Portfolio</h1>
+                <div class="text-content">
+                    <p>Hi, I'm Alissa. I'm a 4th year Engineering Physics student on track for May 2026 graduation. In my spare time, I like taking photos, both digital and film, and enjoying nature. I currently have a travel bug, as I added 13 new cities to my list last year.<br>
+                        <br>Site still in progress</p>
+                </div>
+            </div>
+            <div class="photo-grid">
+                <img src="Photos/me.jpg" alt="Photo of me">
+            </div>
         </div>
         <div class="photo-grid">
             <img src="Photos/Cambodia.jpg" alt="Film Photos of Cambodia">
