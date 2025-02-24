@@ -45,33 +45,6 @@
             margin-right: 20px; /* Add spacing between items */
         }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold; /* Make links bold */
-            display: block; /* Make links clickable area larger */
-        }
-
-        nav a:hover {
-            text-decoration: underline; /* Underline on hover */
-        }
-<!--        Home Styles -->
-        #home {
-          display: flex; /* Establishes a flex container */
-          align-items: center; /* Vertically aligns items in the center */
-          justify-content: space-between; /* Distributes space evenly between items */
-        }
-
-        #home .welcome-header {
-            background-image: url('Photos/bg.jpg'); /* Replace with your photo path */
-            background-size: cover; /* Ensures the photo covers the header */
-            background-position: center; /* Centers the photo */
-            padding: 20px 0; /* Adds padding for the nav */
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
         /* Ensure Nav Links are Visible */
         nav a {
             color: white; /* White text for better contrast */
@@ -93,6 +66,24 @@
             bottom: 0;
             background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay */
             z-index: -1; /* Places it behind the nav */
+        }
+
+<!--        Home Styles -->
+        #home {
+            color: #4dc7e3;
+            display: flex; /* Establishes a flex container */
+            align-items: center; /* Vertically aligns items in the center */
+            justify-content: space-between; /* Distributes space evenly between items */
+        }
+
+        #home .welcome-header {
+            background-image: url('Photos/bg.jpg'); /* Replace with your photo path */
+            background-size: cover; /* Ensures the photo covers the header */
+            background-position: center; /* Centers the photo */
+            padding: 20px 0; /* Adds padding for the nav */
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         #home .text-content {
