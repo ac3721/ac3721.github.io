@@ -67,23 +67,23 @@
             background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay */
             z-index: -1; /* Places it behind the nav */
         }
-
 <!--        Home Styles -->
         #home {
-            color: #4dc7e3;
             display: flex; /* Establishes a flex container */
             align-items: center; /* Vertically aligns items in the center */
             justify-content: space-between; /* Distributes space evenly between items */
         }
 
         #home .welcome-header {
-            background-image: url('Photos/bg.jpg'); /* Replace with your photo path */
-            background-size: cover; /* Ensures the photo covers the header */
-            background-position: center; /* Centers the photo */
-            padding: 20px 0; /* Adds padding for the nav */
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            background-image: url('Photos/bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #4dc7e3; /* Change this to your desired text color */
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Optional: adjust overlay opacity */
+            background-blend-mode: overlay;
         }
 
         #home .text-content {
@@ -342,7 +342,7 @@
 
 <main>
     <section id="home">
-        <h1 class="welcome-header">Welcome to My Portfolio</h1>
+        <h1 class="c">Welcome to My Portfolio</h1>
         <div class="text-content">
             <p>Hi, I'm Alissa. I'm a 4th year Engineering Physics student on track for May 2026 graduation. In my spare time, I like taking photos, both digital and film, and enjoying nature. I currently have a travel bug, as I added 13 new cities to my list last year.<br>
                 <br>Site still in progress</p>
