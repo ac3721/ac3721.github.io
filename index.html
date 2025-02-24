@@ -100,13 +100,17 @@
         .photo {
             flex-shrink: 0; /* Prevent the photo from shrinking */
             width: 30%; /* Adjust width as needed */
-            text-align: right; /* Align the photo to the right */
+            text-align: center; /* Align the photo to the right */
         }
 
         .photo img {
             max-width: 100%; /* Ensure the image fits within the container */
             height: auto; /* Maintain aspect ratio */
             border-radius: 8px; /* Optional: Add rounded corners */
+        }
+
+        .photo img:hover {
+            transform: scale(1.05);
         }
 
         #home .text-content {
@@ -137,10 +141,6 @@
             }
         }
 
-        #home img {
-          max-width: 30%; /* Sets a maximum width for the image */
-          height: auto; /* Maintains the image's aspect ratio */
-        }
 
         hr {
             border: 0; /* Remove default browser styling */
@@ -305,6 +305,14 @@
             max-width: 30%;
             height: auto;
             align-self: center;
+            border-radius: 8px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        /* Hover Effect */
+        .content img:hover {
+            transform: scale(1.05);
         }
 
         /* For smaller screens */
