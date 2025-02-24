@@ -63,16 +63,36 @@
         }
 
         #home .welcome-header {
-            background-image: src="Photos/bg.jpg";
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: white; /* Ensure text is visible on the background */
-            padding: 20px; /* Add some padding around the text */
-            text-align: center; /* Center the text */
-            /* Optional: add a semi-transparent overlay to improve text readability */
-            background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
-            background-blend-mode: overlay;
+            background-image: url('Photos/bg.jpg'); /* Replace with your photo path */
+            background-size: cover; /* Ensures the photo covers the header */
+            background-position: center; /* Centers the photo */
+            padding: 20px 0; /* Adds padding for the nav */
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        /* Ensure Nav Links are Visible */
+        nav a {
+            color: white; /* White text for better contrast */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Adds shadow for readability */
+        }
+
+        nav a:hover {
+            color: #4dc7e3; /* Highlight color on hover */
+            text-decoration: none; /* Optional: remove underline */
+        }
+
+        /* Optional: Add an Overlay for Better Text Contrast */
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay */
+            z-index: -1; /* Places it behind the nav */
         }
 
         #home .text-content {
