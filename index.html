@@ -63,7 +63,7 @@
         }
 
         #home .welcome-header {
-            background-image: url('Photos/bg.jpg');
+            background-image: src="Photos/bg.jpg";
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -76,8 +76,18 @@
         }
 
         #home .text-content {
-          flex: 1; /* Allows text content to grow and fill available space */
-          padding-right: 20px; /* Adds spacing between text and image */
+            flex: 1;
+            padding-right: 20px;
+            margin: 0 5%; /* Adds margins to both left and right sides */
+            max-width: 800px; /* Optional: prevents text from becoming too wide */
+        }
+
+        /* For mobile responsiveness */
+        @media screen and (max-width: 768px) {
+            #home .text-content {
+                margin: 0 10px;
+                padding-right: 0;
+            }
         }
 
         #home img {
