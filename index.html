@@ -96,6 +96,36 @@
             border-top: 2px dashed #4dc7e3;
         }
 
+<!--            /* Photo Grid Container */-->
+        .photo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px; /* Space between photos */
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        /* Individual Photo Styling */
+        .photo-grid img {
+            width: calc(25% - 10px); /* 4 photos per row (subtract gap) */
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        /* Hover Effect */
+        .photo-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Layout for Smaller Screens */
+        @media screen and (max-width: 768px) {
+            .photo-grid img {
+                width: calc(50% - 10px); /* 2 photos per row on small screens */
+            }
+        }
+
 <!--        /* Timeline Styles */-->
         .timeline {
             position: relative;
@@ -293,21 +323,35 @@
     <section id="home">
         <h1 class="welcome-header">Welcome to My Portfolio</h1>
         <div class="text-content">
-            <p>Hi, I'm Alissa. I'm a 4th year Engineering Physics student on track for May 2026 graduation.<br>
+            <p>Hi, I'm Alissa. I'm a 4th year Engineering Physics student on track for May 2026 graduation. In my spare time, I like taking photos, both digital and film, and enjoying nature. I currently have a travel bug, as I added 13 new cities to my list last year.<br>
                 <br>Site still in progress</p>
         </div>
-        <img src="Photos/me.jpg" alt="Photo of me" style="max-width: 146px; max-height: 203px;">
+        <div class="photo-grid">
+            <img src="Photos/Angkor.jpg" alt="Photo of Angkor Wat's Sunrise">
+            <img src="Photos/Chongqing.jpg" alt="Photo of Chongqing's Hongya Caves">
+            <img src="Photos/Melaka.jpg" alt="Photo of Melaka's Dutch Square">
+            <img src="Photos/Penang.jpg" alt="Photo of Penang's Batu Ferringhi Sunset">
+            <img src="Photos/me.jpg" alt="Photo of me">
+<!--            style="max-width: 146px; max-height: 203px;">-->
+        </div>
+        <div class="photo-grid">
+            <img src="Photos/Cambodia.jpg" alt="Film Photos of Cambodia">
+            <img src="Photos/Chengdu.jpg" alt="Film Photos of Chengdu's Wu Hou Shrine">
+            <img src="Photos/Georgetown.jpg" alt="Film Photos of Georgetown">
+            <img src="Photos/Guangzhou.jpg" alt="Film Photos of Guangzhou">
+            <img src="Photos/Sentosa.jpg" alt="Film Photos of Singapore's Sentosa Island">
+        </div>
     </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Here's a brief introduction about myself and my skills.</p>
-    </section>
+<!--    <section id="about">-->
+<!--        <h2>About Me</h2>-->
+<!--        <p>Here's a brief introduction about myself and my skills.</p>-->
+<!--    </section>-->
 
-    <section id="projects">
-        <h2>My Projects</h2>
-        <!-- Add your projects here -->
-    </section>
+<!--    <section id="projects">-->
+<!--        <h2>My Projects</h2>-->
+<!--        &lt;!&ndash; Add your projects here &ndash;&gt;-->
+<!--    </section>-->
     <section id="timeline">
         <hr class="dashed">
         <h2>Timeline</h2>
