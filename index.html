@@ -258,7 +258,7 @@
           transform: translateX(-50%);
           background-color: white;
           border: 4px solid #4dc7e3;
-          top: -40 px; /* Adjust for vertical alignment */
+          top: 45 px; /* Adjust for vertical alignment */
           border-radius: 50%;
           z-index: 2;
         }
@@ -337,6 +337,8 @@
 
 <!--        /* For Contact Form */-->
         #contact {
+            clear: both; /* Ensure it starts after floated elements */
+            margin-top: 50px; /* Adjust as needed */
             background-color: #f0f0f0;
             padding: 20px;
             margin-top: 20px;
@@ -374,8 +376,6 @@
         }
 
         #contact button {
-            clear: both; /* Ensure it starts after floated elements */
-            margin-top: 50px; /* Adjust as needed */
             background-color: #007bff;
             color: white;
             padding: 10px 20px;
