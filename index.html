@@ -185,44 +185,25 @@
             }
         }
 
-<!--        /* Timeline Styles */-->
+        /* Timeline Styles */
         .timeline {
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px 0; /* Add padding for top and bottom spacing */
-            text-align: center;
-        }
-
-        #timeline h1 {
-            text-align: center;
-            margin-bottom: 15px;
-            background-color: #4dc7e3; /* Blue background */
-            color: white; /* White text for contrast */
-            padding: 25px; /* Add padding for spacing */
-        }
-
-        #timeline h2 {
-            text-align: center;
-            margin-bottom: 15px;
-        }
-
-        #timeline img {
-          max-width: 30%; /* Adjust image width as needed */
-          height: auto; /* Maintain aspect ratio */
-          text-align: right;
+          position: relative;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px 0;
+          text-align: center;
         }
 
         .timeline::after {
-            content: '';
-            position: absolute;
-            width: 6px;
-            background-color: #474e5d;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -3px;
-            z-index: 1; /* Ensure it's behind the content */
+          content: '';
+          position: absolute;
+          width: 6px;
+          background-color: #474e5d;
+          top: 0;
+          bottom: 0;
+          left: 50%;
+          margin-left: -3px;
+          z-index: 1;
         }
 
         /* Container base styles */
@@ -230,20 +211,20 @@
           padding: 10px 20px;
           position: relative;
           background-color: white;
-          width: 60%; /* Adjusted for left/right spacing */
-          margin: 20px 0; /* Vertical spacing */
+          width: 60%;
+          margin: 20px 0;
         }
 
         /* Left-aligned container */
         .left {
-          margin-left: 5%; /* Push to the left */
+          margin-left: 5%;
           float: left;
           clear: left;
         }
 
         /* Right-aligned container */
         .right {
-          margin-right: 5%; /* Push to the right */
+          margin-right: 5%;
           float: right;
           clear: right;
         }
@@ -254,13 +235,23 @@
           position: absolute;
           width: 25px;
           height: 25px;
-          left: 50%; /* Center horizontally */
-          transform: translateX(-50%);
           background-color: white;
           border: 4px solid #4dc7e3;
-          top: 45 px; /* Adjust for vertical alignment */
+          top: -35px; /* Adjust for vertical alignment */
           border-radius: 50%;
           z-index: 2;
+        }
+
+        /* Left container circle (33% from the right) */
+        .left::after {
+          right: 33%; /* Move circle 33% from the right */
+          left: auto; /* Reset left positioning */
+        }
+
+        /* Right container circle (33% from the left) */
+        .right::after {
+          left: 33%; /* Move circle 33% from the left */
+          right: auto; /* Reset right positioning */
         }
 
         /* Left container arrow */
@@ -268,7 +259,7 @@
           content: " ";
           position: absolute;
           top: 22px;
-          right: -10px; /* Point toward the timeline */
+          right: -10px;
           border: medium solid white;
           border-width: 10px 0 10px 10px;
           border-color: transparent transparent transparent white;
@@ -280,112 +271,107 @@
           content: " ";
           position: absolute;
           top: 22px;
-          left: -10px; /* Point toward the timeline */
+          left: -10px;
           border: medium solid white;
           border-width: 10px 10px 10px 0;
           border-color: transparent white transparent transparent;
           z-index: 1;
         }
 
+        /* Content styles */
         .content {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: 20px 30px;
-            background-color: white;
-            position: relative;
-            border-radius: 6px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border: 2px solid #4dc7e3;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          padding: 20px 30px;
+          background-color: white;
+          position: relative;
+          border-radius: 6px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          border: 2px solid #4dc7e3;
         }
+
         .text-content {
-            flex: 1;
-            padding-right: 15px;
+          flex: 1;
+          padding-right: 15px;
         }
 
         .content img {
-            max-width: 40%;
-            height: auto;
-            align-self: center;
-            border-radius: 5px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
+          max-width: 40%;
+          height: auto;
+          align-self: center;
+          border-radius: 5px;
+          object-fit: cover;
+          transition: transform 0.3s ease;
         }
 
         /* Hover Effect */
         .content img:hover {
-            transform: scale(1.05);
+          transform: scale(1.05);
         }
 
         /* For smaller screens */
         @media screen and (max-width: 600px) {
-            .content {
-                flex-direction: column;
-            }
+          .content {
+            flex-direction: column;
+          }
 
-            .content img {
-                max-width: 100%;
-                margin-top: 15px;
-            }
+          .content img {
+            max-width: 100%;
+            margin-top: 15px;
+          }
         }
-        .timeline::after {
-          content: "";
-          display: table;
+
+        /* Contact Section */
+        #contact {
+          background-color: #f0f0f0;
+          padding: 20px;
+          margin-top: 50px;
+          text-align: center;
           clear: both;
         }
 
-
-<!--        /* For Contact Form */-->
-        #contact {
-            clear: both; /* Ensure it starts after floated elements */
-            margin-top: 50px; /* Adjust as needed */
-            background-color: #f0f0f0;
-            padding: 20px;
-            margin-top: 20px;
-            text-align: center;
-        }
-
         #contact h2 {
-            text-align: center;
-            margin-bottom: 15px;
+          text-align: center;
+          margin-bottom: 15px;
         }
 
         #contact form {
-            display: flex;
-            flex-direction: column;
-            max-width: 500px;
-            margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          max-width: 500px;
+          margin: 0 auto;
         }
 
         .form-group {
-            margin-bottom: 15px;
+          margin-bottom: 15px;
         }
 
         #contact input,
         #contact textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-             box-sizing: border-box; /* Add this so padding doesn't mess up width! */
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
         }
 
         #contact textarea {
-            height: 150px;
-            resize: vertical;
+          height: 150px;
+          resize: vertical;
         }
 
         #contact button {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
+          background-color: #007bff;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
         }
 
         #contact button:hover {
-            background-color: #0056b3;
+          background-color: #0056b3;
         }
     </style>
 </head>
