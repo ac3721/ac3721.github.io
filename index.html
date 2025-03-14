@@ -226,23 +226,24 @@
         }
 
         .container {
-            padding: 10px 40px;
+            padding: 10px 20px;
             position: relative;
             background-color: inherit;
-            width: 45%;
+            width: 65%;
         }
 
         .container::after {
             content: '';
-            position: absolute;
+            position: fixed; /* Changed from absolute to fixed */
             width: 25px;
             height: 25px;
-            left: -17px;  /*circle area*/
+            left: 50%; /* Center horizontally relative to the viewport */
+            transform: translateX(-50%); /* Adjust for exact center */
             background-color: white;
             border: 4px solid #4dc7e3;
-            top: 15px;
+            top: 15px; /* Still relative to the viewport, not container! */
             border-radius: 50%;
-            z-index: 2; /* Ensure it's above the line */
+            z-index: 2;
         }
 
         .left {
@@ -250,7 +251,7 @@
         }
 
         .right {
-            left: 50%;
+            left: 0%;
         }
 
         .left::before {
@@ -304,10 +305,10 @@
         }
 
         .content img {
-            max-width: 30%;
+            max-width: 40%;
             height: auto;
             align-self: center;
-            border-radius: 8px;
+            border-radius: 5px;
             object-fit: cover;
             transition: transform 0.3s ease;
         }
