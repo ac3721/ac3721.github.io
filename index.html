@@ -225,67 +225,78 @@
             z-index: 1; /* Ensure it's behind the content */
         }
 
+
+        /* Central timeline line */
+        .timeline-line {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 4px;
+          height: 100%;
+          background: #4dc7e3;
+          z-index: 1;
+        }
+
+        /* Container base styles */
         .container {
-            padding: 10px 20px;
-            position: relative;
-            background-color: white;
-            width: 65%;
+          padding: 10px 20px;
+          position: relative;
+          background-color: white;
+          width: 45%; /* Adjusted for left/right spacing */
+          margin: 20px 0; /* Vertical spacing */
         }
 
-        .container::after {
-            content: '';
-            position: absolute; /* Changed from absolute to fixed */
-            width: 25px;
-            height: 25px;
-            left: 50%; /* Center horizontally relative to the viewport */
-            transform: translateX(-50%); /* Adjust for exact center */
-            background-color: white;
-            border: 4px solid #4dc7e3;
-            top: 15px; /* Still relative to the viewport, not container! */
-            border-radius: 50%;
-            z-index: 2;
-        }
-
+        /* Left-aligned container */
         .left {
-            left: 0%;
+          margin-left: 5%; /* Push to the left */
+          float: left;
+          clear: left;
         }
 
+        /* Right-aligned container */
         .right {
-            left: 0%;
+          margin-right: 5%; /* Push to the right */
+          float: right;
+          clear: right;
         }
 
+        /* Circle (centered on timeline) */
+        .container::after {
+          content: '';
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          left: 50%; /* Center horizontally */
+          transform: translateX(-50%);
+          background-color: white;
+          border: 4px solid #4dc7e3;
+          top: 15px; /* Adjust for vertical alignment */
+          border-radius: 50%;
+          z-index: 2;
+        }
+
+        /* Left container arrow */
         .left::before {
-            content: " ";
-            height: 0;
-            position: absolute;
-            top: 22px;
-            width: 0;
-            z-index: 1;
-            right: 30px;
-            border: medium solid white;
-            border-width: 10px 0 10px 10px;
-            border-color: transparent transparent transparent white;
+          content: " ";
+          position: absolute;
+          top: 22px;
+          right: -10px; /* Point toward the timeline */
+          border: medium solid white;
+          border-width: 10px 0 10px 10px;
+          border-color: transparent transparent transparent white;
+          z-index: 1;
         }
 
+        /* Right container arrow */
         .right::before {
-            content: " ";
-            height: 0;
-            position: absolute;
-            top: 22px;
-            width: 0;
-            z-index: 1;
-            left: 30px;
-            border: medium solid white;
-            border-width: 10px 10px 10px 0;
-            border-color: transparent white transparent transparent;
-        }
-
-        .right::after {
-            left: -17px; /* Keep this! */
-        }
-
-        .left::after {
-            right: -17px;
+          content: " ";
+          position: absolute;
+          top: 22px;
+          left: -10px; /* Point toward the timeline */
+          border: medium solid white;
+          border-width: 10px 10px 10px 0;
+          border-color: transparent white transparent transparent;
+          z-index: 1;
         }
 
         .content {
@@ -444,6 +455,9 @@
         <hr class="dashed">
         <h1>Timeline</h1>
         <hr class="dashed">
+
+        <div class="timeline-line"> line</div>
+
         <div class="timeline">
             <div class="container left">
                 <div class="content">
