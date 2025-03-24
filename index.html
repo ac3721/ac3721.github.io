@@ -187,10 +187,12 @@
 
 <!--SKILLLS-->
         .columns-container {
-            display: flex;
-            justify-content: space-between;
-            gap: 2rem;
-            margin: 2rem 0;
+<!--            display: flex;-->
+<!--            justify-content: space-between;-->
+<!--            gap: 2rem;-->
+<!--            margin: 2rem 0;-->
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
         }
 
         #skill h1 {
@@ -201,13 +203,11 @@
         }
 
         .column {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-<!--            flex: 1;-->
-<!--            background-color: #f8f9fa;-->
-<!--            padding: 1.5rem;-->
-<!--            border-radius: 8px;-->
-<!--            box-shadow: 0 2px 4px rgba(0,0,0,0.1);-->
+            flex: 1;
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .bullet-list {
