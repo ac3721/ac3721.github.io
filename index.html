@@ -186,15 +186,6 @@
         }
 
 <!--SKILLLS-->
-        .columns-container {
-<!--            display: flex;-->
-<!--            justify-content: space-between;-->
-<!--            gap: 2rem;-->
-<!--            margin: 2rem 0;-->
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-
         #skill h1 {
             text-align: center;
             margin-bottom: 15px;
@@ -202,45 +193,39 @@
             padding: 10px; /* Add padding for spacing */
         }
 
-<!--        .column {-->
-<!--            flex: 1;-->
-<!--            padding: 1.5rem;-->
-<!--            border-radius: 8px;-->
-<!--            box-shadow: 0 2px 4px rgba(0,0,0,0.1);-->
-<!--        }-->
-
-        .bullet-list {
-            list-style-type: none;
-            padding-left: 1.5rem;
+         .columns-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow columns to wrap */
+            justify-content: space-between;
+            gap: 2rem;
         }
 
-        .bullet-list li {
-            margin-bottom: 0.8rem;
-            position: relative;
-            line-height: 1.6;
+        .column {
+            flex: 1;
+            min-width: 300px; /* Minimum width before wrapping */
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
         }
 
+        /* Mobile view */
+        @media (max-width: 768px) {
+            .column {
+                flex: 100% !important; /* Force full width */
+                min-width: unset;
+            }
+
+            .columns-container {
+                flex-direction: column;
+            }
+        }
+
+        /* Bullet styling */
         .bullet-list li::before {
             content: "•";
             color: #4dc7e3;
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-            position: absolute;
-            left: 0;
-        }
-
-        @media (max-width: 768px) {
-            .columns-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .column {
-                width: 100%;
-                margin-bottom: 1rem;
-            }
+            margin-right: 0.5rem;
         }
 
         /* Timeline Styles */
