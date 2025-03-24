@@ -193,7 +193,7 @@
             margin: 2rem 0;
         }
 
-        #skills h1 {
+        #skill h1 {
             text-align: center;
             margin-bottom: 15px;
             color: #368B9E;
@@ -201,11 +201,13 @@
         }
 
         .column {
-            flex: 1;
-            background-color: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+<!--            flex: 1;-->
+<!--            background-color: #f8f9fa;-->
+<!--            padding: 1.5rem;-->
+<!--            border-radius: 8px;-->
+<!--            box-shadow: 0 2px 4px rgba(0,0,0,0.1);-->
         }
 
         .bullet-list {
@@ -241,7 +243,6 @@
                 margin-bottom: 1rem;
             }
         }
-
 
         /* Timeline Styles */
         .timeline {
@@ -309,13 +310,13 @@
 
         /* Left container circle (33% from the right) */
         .left::after {
-          right: 27.2%; /* Move circle 33% from the right */
+          right: 27.1%; /* Move circle 33% from the right */
           left: auto; /* Reset left positioning */
         }
 
         /* Right container circle (33% from the left) */
         .right::after {
-          left: 27.2%; /* Move circle 33% from the left */
+          left: 27.1%; /* Move circle 33% from the left */
           right: auto; /* Reset right positioning */
         }
 
