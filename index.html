@@ -186,32 +186,39 @@
         }
 
 <!--SKILLLS-->
-         .columns-container {
-            display: flex;
-            flex-wrap: wrap; /* Allow columns to wrap */
-            justify-content: space-between;
-            gap: 2rem;
-        }
+<!--        .columns-container {-->
+<!--            display: flex;-->
+<!--            flex-wrap: wrap; /* Allow columns to wrap */-->
+<!--            justify-content: space-between;-->
+<!--            gap: 2rem;-->
+<!--        }-->
 
         .column {
-            flex: 1;
-            min-width: 150px; /* Minimum width before wrapping */
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 1rem;
+            padding: 0 15px;
+<!--            flex: 1;-->
+<!--            min-width: 150px; /* Minimum width before wrapping */-->
+<!--            padding: 1.5rem;-->
+<!--            border-radius: 8px;-->
+<!--            margin-bottom: 1rem;-->
         }
 
+        @media (min-width: 500px) {
+            .grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
         /* Mobile view */
-        @media (max-width: 768px) {
-            .column {
-                flex: 100% !important; /* Force full width */
-                min-width: unset;
-            }
+<!--        @media (max-width: 768px) {-->
+<!--            .column {-->
+<!--                flex: 100% !important; /* Force full width */-->
+<!--                min-width: unset;-->
+<!--            }-->
 
-            .columns-container {
-                flex-direction: column;
-            }
-        }
+<!--            .columns-container {-->
+<!--                flex-direction: column;-->
+<!--            }-->
+<!--        }-->
 
         /* Bullet styling */
         .bullet-list li::before {
@@ -476,39 +483,40 @@
 
     <section id="skill">
         <hr class="dashed">
-<!--        <h1 style="text-align: center; padding: 10px; color: #368B9E;">-->
-        <h1>
+        <h1 style="text-align: center; padding: 10px; color: #368B9E;">
             My Skills
         </h1>
-        <div class="columns-container">
-            <div class="column">
-                <h3>Software Languages</h3>
-                <ul class="bullet-list">
-                    <li>Java</li>
-                    <li>Python</li>
-                    <li>C</li>
-                    <li>Javascript</li>
-                </ul>
-            </div>
-            <div class="column">
-                <h3>Mechatronic Programs</h3>
-                <ul class="bullet-list">
-                    <li>Altium</li>
-                    <li>SolidWorks</li>
-                    <li>AutoCAD</li>
-                    <li>Fusion 360</li>
-                    <li>MATLAB</li>
-                </ul>
-            </div>
-            <div class="column">
-                <h3>Manufacturing</h3>
-                <ul class="bullet-list">
-                    <li>Mill</li>
-                    <li>Lathe</li>
-                    <li>Waterjet Cutter</li>
-                    <li>Drill Press</li>
-                    <li>3D Printing</li>
-                </ul>
+        <div class="grid">
+            <div class="columns-container">
+                <div class="column">
+                    <h3>Software Languages</h3>
+                    <ul class="bullet-list">
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>C</li>
+                        <li>Javascript</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Mechatronic Programs</h3>
+                    <ul class="bullet-list">
+                        <li>Altium</li>
+                        <li>SolidWorks</li>
+                        <li>AutoCAD</li>
+                        <li>Fusion 360</li>
+                        <li>MATLAB</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Manufacturing</h3>
+                    <ul class="bullet-list">
+                        <li>Mill</li>
+                        <li>Lathe</li>
+                        <li>Waterjet Cutter</li>
+                        <li>Drill Press</li>
+                        <li>3D Printing</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
