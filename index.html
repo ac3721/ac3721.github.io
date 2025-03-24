@@ -185,6 +185,64 @@
             }
         }
 
+<!--SKILLLS-->
+        .columns-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        #skills h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #368B9E;
+            padding: 10px; /* Add padding for spacing */
+        }
+
+        .column {
+            flex: 1;
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .bullet-list {
+            list-style-type: none;
+            padding-left: 1.5rem;
+        }
+
+        .bullet-list li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .bullet-list li::before {
+            content: "•";
+            color: #4dc7e3;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            .columns-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .column {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+
+
         /* Timeline Styles */
         .timeline {
           position: relative;
@@ -251,13 +309,13 @@
 
         /* Left container circle (33% from the right) */
         .left::after {
-          right: 28%; /* Move circle 33% from the right */
+          right: 27.2%; /* Move circle 33% from the right */
           left: auto; /* Reset left positioning */
         }
 
         /* Right container circle (33% from the left) */
         .right::after {
-          left: 28%; /* Move circle 33% from the left */
+          left: 27.2%; /* Move circle 33% from the left */
           right: auto; /* Reset right positioning */
         }
 
@@ -387,7 +445,7 @@
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#about" class="tablink" onclick="openTab(event, 'about')">About</a></li>
+            <li><a href="#skill">Skills</a></li>
             <li><a href="#projects" class="tablink" onclick="openTab(event, 'projects')">Projects</a></li>
             <li><a href="#timeline">Timeline</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -439,10 +497,43 @@
 <!--        <p>Here's a brief introduction about myself and my skills.</p>-->
 <!--    </section>-->
 
-<!--    <section id="projects">-->
-<!--        <h2>My Projects</h2>-->
-<!--        &lt;!&ndash; Add your projects here &ndash;&gt;-->
-<!--    </section>-->
+    <section id="skill">
+        <hr class="dashed">
+        <h1>My Skills</h1>
+        <div class="columns-container">
+            <div class="column">
+                <h3>Software Languages</h3>
+                <ul class="bullet-list">
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>C</li>
+                    <li>Javascript</li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <h3>Mechatronic Programs</h3>
+                <ul class="bullet-list">
+                    <li>Altium</li>
+                    <li>SolidWorks</li>
+                    <li>AutoCAD</li>
+                    <li>Fusion 360</li>
+                    <li>MATLAB</li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <h3>Manufacturing</h3>
+                <ul class="bullet-list">
+                    <li>Mill</li>
+                    <li>Lathe</li>
+                    <li>Waterjet Cutter</li>
+                    <li>Drill Press</li>
+                    <li>3D Printing</li>
+                </ul>
+            </div>
+        </div>
+    </section>
     <section id="timeline">
         <hr class="dashed">
         <h1>Timeline</h1>
