@@ -1,7 +1,7 @@
 # Hi, I'm Alissa 👋
 
-🔭 I’m a 5th year **Engineering Physics** student on track for May 2026 graduation.  
-🌱 "Jack of all (engineering) trades, master of none, but better than a master of one."  
+🔭 I’m a 5th year **Engineering Physics** student with a minor in **Entrepreneurship** on track for May 2026 graduation.  
+🌱 "Jack of all (engineering & product development) trades, master of none, but better than a master of one."  
 📫 Reach me: [LinkedIn](https://linkedin.com/in/alissa--chen) | 💼 [Portfolio](https://ac3721.github.io)
 
 ## 🚀 Skills  

@@ -67,7 +67,7 @@
             background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay */
             z-index: -1; /* Places it behind the nav */
         }
-<!--        Home Styles -->
+/*  Home Styles  */
         #home {
             display: flex; /* Establishes a flex container */
             align-items: center; /* Vertically aligns items in the center */
@@ -155,7 +155,7 @@
             border-top: 2px dashed #4dc7e3;
         }
 
-<!--            /* Photo Grid Container */-->
+/* Photo Grid Container */
         .photo-grid {
             display: flex;
             flex-wrap: wrap;
@@ -185,47 +185,15 @@
             }
         }
 
-<!--SKILLLS-->
-<!--        .columns-container {-->
-<!--            display: flex;-->
-<!--            flex-wrap: wrap; /* Allow columns to wrap */-->
-<!--            justify-content: space-between;-->
-<!--            gap: 2rem;-->
-<!--        }-->
-
-        .column {
-            padding: 0 15px;
-<!--            flex: 1;-->
-<!--            min-width: 150px; /* Minimum width before wrapping */-->
-<!--            padding: 1.5rem;-->
-<!--            border-radius: 8px;-->
-<!--            margin-bottom: 1rem;-->
+/* SKILLLS*/
+        #skill .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Forces 3 columns */
+            gap: 20px; /* Optional spacing */
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        @media (min-width: 500px) {
-            .grid {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-        }
-        /* Mobile view */
-<!--        @media (max-width: 768px) {-->
-<!--            .column {-->
-<!--                flex: 100% !important; /* Force full width */-->
-<!--                min-width: unset;-->
-<!--            }-->
-
-<!--            .columns-container {-->
-<!--                flex-direction: column;-->
-<!--            }-->
-<!--        }-->
-
-        /* Bullet styling */
-        .bullet-list li::before {
-            content: "•";
-            color: #4dc7e3;
-            margin-right: 0.5rem;
-        }
 
         /* Timeline Styles */
         .timeline {
@@ -240,7 +208,7 @@
             text-align: center;
             margin-bottom: 15px;
             color: #368B9E;
-<!--            padding: 10px; /* Add padding for spacing */-->
+/*             padding: 10px; /* Add padding for spacing */
         }
 
         .timeline::after {
@@ -452,7 +420,7 @@
                 <br>
                 <h1 class="c">Welcome to Alissa's Portfolio</h1>
                 <div class="text-content">
-                    <p>Hi, I'm Alissa, a 5th year Engineering Physics student at the University of British Columbia, on track for May 2026 graduation.
+                    <p>Hi, I'm Alissa, a 5th year Engineering Physics student with a minor in Entrepreneurship at the University of British Columbia, on track for May 2026 graduation.
                         I would consider myself as a jack of all trades as I have held mechanical, electrical, software, and entrepreneurial roles in various engineering projects.
                         As the saying goes, "Jack of all trades, master of none, better than a master of one."
                         <br><br>
@@ -472,51 +440,51 @@
             <img src="Photos/Chengdu.jpg" alt="Film Photos of Chengdu's Wu Hou Shrine">
             <img src="Photos/Georgetown.jpg" alt="Film Photos of Georgetown">
             <img src="Photos/Guangzhou.jpg" alt="Film Photos of Guangzhou">
-<!--            <img src="Photos/Sentosa.jpg" alt="Film Photos of Singapore's Sentosa Island">-->
+            <img src="Photos/Sentosa.jpg" alt="Film Photos of Singapore's Sentosa Island">
         </div>
     </section>
 
-<!--    <section id="about">-->
-<!--        <h2>About Me</h2>-->
-<!--        <p>Here's a brief introduction about myself and my skills.</p>-->
-<!--    </section>-->
-
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Here's a brief introduction about myself and my skills.</p>
+    </section>
     <section id="skill">
         <hr class="dashed">
         <h1 style="text-align: center; padding: 10px; color: #368B9E;">
             My Skills
         </h1>
+
         <div class="grid">
-            <div class="columns-container">
-                <div class="column">
-                    <h3>Software Languages</h3>
-                    <ul class="bullet-list">
-                        <li>Java</li>
-                        <li>Python</li>
-                        <li>C</li>
-                        <li>Javascript</li>
-                    </ul>
-                </div>
-                <div class="column">
-                    <h3>Mechatronic Programs</h3>
-                    <ul class="bullet-list">
-                        <li>Altium</li>
-                        <li>SolidWorks</li>
-                        <li>AutoCAD</li>
-                        <li>Fusion 360</li>
-                        <li>MATLAB</li>
-                    </ul>
-                </div>
-                <div class="column">
-                    <h3>Manufacturing</h3>
-                    <ul class="bullet-list">
-                        <li>Mill</li>
-                        <li>Lathe</li>
-                        <li>Waterjet Cutter</li>
-                        <li>Drill Press</li>
-                        <li>3D Printing</li>
-                    </ul>
-                </div>
+            <div class="column">
+                <h3>Software Languages</h3>
+                <ul class="bullet-list">
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>C</li>
+                    <li>Javascript</li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <h3>Mechatronic Programs</h3>
+                <ul class="bullet-list">
+                    <li>Altium</li>
+                    <li>SolidWorks</li>
+                    <li>AutoCAD</li>
+                    <li>Fusion 360</li>
+                    <li>MATLAB</li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <h3>Manufacturing</h3>
+                <ul class="bullet-list">
+                    <li>Mill</li>
+                    <li>Lathe</li>
+                    <li>Waterjet Cutter</li>
+                    <li>Drill Press</li>
+                    <li>3D Printing</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -525,7 +493,7 @@
         <h1>Timeline</h1>
         <hr class="dashed">
         <div class="timeline">
-            <div class="container left">
+            <div class="container right">
                 <div class="content">
                     <div class="text-content">
                         <h2>Sept 2024 - Present</h2>
@@ -535,6 +503,48 @@
                     <img src="Photos/hemo.jpg" alt="Photo of PCB for Hemozoin Detector">
                 </div>
             </div>
+            <!-- <div class="container right">
+                <div class="content">
+                    <div class="text-content">
+                        <h2>Aug 2025 - Present </h2>
+                        <h3><strong>Project:</strong> Emerald Medical Diagnostics </h3>
+                        <p><b>Skills:</b> New Product Development, customer persona, app development, E2E client lifecycle, Javascript, image detection</p>
+                    </div>
+                    <img src="Photos/Gasly.jpg" alt="Photo of Gasly app interface">
+                </div>
+            </div> -->
+            <div class="container left">
+                <div class="content">
+                    <div class="text-content">
+                        <h2>Sept 2025 - Dec 2025 </h2>
+                        <h3><strong>Project:</strong> Gasly - Gas Price App</h3>
+                        <p><b>Skills:</b> Market analysis, customer persona, app development, E2E client lifecycle, Javascript, image detection</p>
+                    </div>
+                    <img src="Photos/Gasly.png" alt="Photo of Gasly app interface">
+                </div>
+            </div>
+            <div class="container right">
+                <div class="content">
+                    <div class="text-content">
+                        <h2>May 2025 - Aug 2025</h2>
+                        <h3>Software Developer and Research & Development Engineer  <br>
+                            <em>Novarc Technologies: Software and Vision teams</em> </h3>
+                        <h4><strong>Industry:</strong> Robotics</h4>
+                        <p><b>Skills:</b> Python, Typescript, data analysis, UI testing, REST APIs, manufacturing, Solidwords, automation</p>
+                    </div>
+                    <img src="Photos/Novarc.jpg" alt="Photo of Novarc Summer 2025 Interns">
+                </div>
+            </div>
+            <div class="container left">
+                <div class="content">
+                    <div class="text-content">
+                        <h2>Jan 2025 - Mar 2025 </h2>
+                        <h3><strong>Project:</strong> Modular Fridge Product Discovery</h3>
+                        <p><b>Skills:</b> New product development, R-W-W, market discovery, financial modeling</p>
+                    </div>
+                    <img src="Photos/Fridge.png" alt="Photo of modular fridge CAD">
+                </div>
+            </div>
             <div class="container right">
                 <div class="content">
                     <div class="text-content">
@@ -542,7 +552,7 @@
                         <h3>Computational Research Officer <br>
                             <em>Genome Institute of Singapore: Laboratory of RNA Structuromics</em> </h3>
                         <h4><strong>Industry:</strong> Bioinformatics</h4>
-                        <p><b>Skills:</b> Python, graphing, excel, data analysis, Linux, pipelines</p>
+                        <p><b>Skills:</b> Python, graphing, excel, data analysis, Linux, data visualization, pipelines</p>
                     </div>
                     <img src="Photos/GIS.jpg" alt="Photo of Wan Lab Group">
                 </div>
