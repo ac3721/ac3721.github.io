@@ -227,7 +227,7 @@
         }
 
         .timeline .container {
-            min-height: 220px; /* Adjust as needed */
+            min-height: 300px;
             display: flex;
             align-items: center;
         }
@@ -316,6 +316,10 @@
           border-radius: 6px;
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
           border: 2px solid #4dc7e3;
+        }
+
+        .timeline .content:not(:has(img)) {
+            justify-content: flex-start;
         }
 
         .text-content {
