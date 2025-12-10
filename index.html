@@ -199,166 +199,61 @@
         }
 
 /* Timeline Styles */
-        .timeline {
-          position: relative;
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 20px 0;
-          text-align: center;
-        }
-
-        #timeline h1 {
-            text-align: center;
-            margin-bottom: 15px;
-            color: #368B9E;
-/*             padding: 10px; /* Add padding for spacing */
-        }
-
-        .timeline::after {
-          content: '';
-          position: absolute;
-          width: 6px;
-          background-color: #474e5d;
-          top: 0;
-          bottom: 0;
-          left: 50%;
-          margin-left: -3px;
-          z-index: 1;
+        .container {
+            padding: 10px 20px;
+            position: relative;
+            background-color: white;
+            margin: 20px 0;
         }
 
         .timeline .container {
-            /* min-height: 300px;
-            display: flex;
-            align-items: center; */
-            width: 45%;              /* same width for left and right */
+            width: 60%;
             min-height: 300px;
             box-sizing: border-box;
         }
 
-
-        /* Container base styles */
-        .container {
-          padding: 10px 20px;
-          position: relative;
-          background-color: white;
-          width: 60%;
-          margin: 20px 0;
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        /* Left-aligned container */
-        .left {
-          margin-left: 5%;
-          float: left;
-          clear: left;
+        .timeline .left {
+            align-self: flex-start;
+            margin-left: 5%;
         }
 
-        /* Right-aligned container */
-        .right {
-          margin-right: 5%;
-          float: right;
-          clear: right;
+        .timeline .right {
+            align-self: flex-end;
+            margin-right: 5%;
         }
 
-        /* Circle (centered on timeline) */
-        .container::after {
-          content: '';
-          position: absolute;
-          width: 25px;
-          height: 25px;
-          background-color: white;
-          border: 4px solid #4dc7e3;
-          top: -35px; /* Adjust for vertical alignment */
-          border-radius: 50%;
-          z-index: 2;
-        }
-
-        /* Left container circle (33% from the right) */
-        .left::after {
-          right: 27.1%; /* Move circle 33% from the right */
-          left: auto; /* Reset left positioning */
-        }
-
-        /* Right container circle (33% from the left) */
-        .right::after {
-          left: 27.1%; /* Move circle 33% from the left */
-          right: auto; /* Reset right positioning */
-        }
-
-        /* Left container arrow */
-        .left::before {
-          content: " ";
-          position: absolute;
-          top: 22px;
-          right: -10px;
-          border: medium solid white;
-          border-width: 10px 0 10px 10px;
-          border-color: transparent transparent transparent white;
-          z-index: 1;
-        }
-
-        /* Right container arrow */
-        .right::before {
-          content: " ";
-          position: absolute;
-          top: 22px;
-          left: -10px;
-          border: medium solid white;
-          border-width: 10px 10px 10px 0;
-          border-color: transparent white transparent transparent;
-          z-index: 1;
-        }
-
-        /* Content styles */
-        .content {
-          display: flex;
-          justify-content: space-between;
-          /* align-items: flex-start; */
-          align-items: center;
-          padding: 20px 30px;
-          background-color: white;
-          position: relative;
-          border-radius: 6px;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          border: 2px solid #4dc7e3;
-        }
-
-        /* Content with image */
         .timeline .content:has(img) {
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
         }
 
-        /* Content WITHOUT image — make it behave normally */
         .timeline .content:not(:has(img)) {
             display: block;
+            text-align: left;
         }
 
-
-        .text-content {
-          flex: 1;
-          padding-right: 15px;
+        /* Image fixes */
+        .timeline .content img {
+            max-height: 150px;
+            max-width: 40%;
+            object-fit: contain;
+            margin-left: 20px;
         }
 
-        .content img {
-          /* max-width: 40%;
-          max-height: 150px;
-          width: auto;
-          align-self: center;
-          border-radius: 5px;
-          object-fit: contain; */
-          max-height: 150px;
-          max-width: 40%;
-          object-fit: contain;
-          width: auto;
-          margin-left: 20px;
-          /* object-fit: cover; */
-          transition: transform 0.3s ease;
-        }
-
-        /* Hover Effect */
-        .content img:hover {
-          transform: scale(1.05);
+        /* Hover effect */
+        .timeline .content img:hover {
+            transform: scale(1.05);
         }
 
         /* For smaller screens */
