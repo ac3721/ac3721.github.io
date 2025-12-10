@@ -226,6 +226,12 @@
           z-index: 1;
         }
 
+        .timeline .container {
+            min-height: 220px; /* Adjust as needed */
+            display: flex;
+            align-items: center;
+        }
+
         /* Container base styles */
         .container {
           padding: 10px 20px;
@@ -302,7 +308,8 @@
         .content {
           display: flex;
           justify-content: space-between;
-          align-items: flex-start;
+          /* align-items: flex-start; */
+          align-items: center;
           padding: 20px 30px;
           background-color: white;
           position: relative;
@@ -318,10 +325,12 @@
 
         .content img {
           max-width: 40%;
-          height: auto;
+          max-height: 150px;
+          width: auto;
           align-self: center;
           border-radius: 5px;
-          object-fit: cover;
+          object-fit: contain;
+          /* object-fit: cover; */
           transition: transform 0.3s ease;
         }
 
